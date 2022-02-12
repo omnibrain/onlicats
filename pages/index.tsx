@@ -1,17 +1,22 @@
 import type { NextPage } from "next";
+import { signIn, useSession, signOut } from "next-auth/react";
 import img from "./img.svg";
 
 const Home: NextPage = () => {
+  const { data: session } = useSession();
+  if (session) {
+    return (
+      <>
+        Signed in as {session.user?.email ?? "unknown"} <br />
+        <button onClick={() => signOut()}>Sign out</button>
+      </>
+    );
+  }
   return (
-    <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4">
-      <div className="shrink-0">
-        <img className="h-12 w-12" src={img.src} alt="ChitChat Logo" />
-      </div>
-      <div>
-        <div className="text-xl font-medium text-black">ChitChat</div>
-        <p className="text-slate-500">You have a new message!</p>
-      </div>
-    </div>
+    <>
+      Not signed in <br />
+      <button onClick={() => signIn()}>Sign in</button>
+    </>
   );
 };
 
