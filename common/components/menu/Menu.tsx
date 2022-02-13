@@ -49,9 +49,9 @@ export const Menu: React.FunctionComponent<MenuProps> = ({ open, onClose }) => {
         <motion.a
           variants={item}
           className="font-mono p-4 text-2xl text-slate-900 hover:text-violet-900"
-          href="/account"
+          href="/profile"
         >
-          Account
+          My Profile
         </motion.a>
         <motion.button
           variants={item}
