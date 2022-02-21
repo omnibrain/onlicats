@@ -8,7 +8,7 @@ interface HeaderProps {}
 
 export const Header: React.FunctionComponent<HeaderProps> = ({ children }) => {
   return (
-    <header className="h-20 flex justify-start sm:justify-center items-center space-x-1 px-4">
+    <header className="h-20 flex justify-start sm:justify-center items-center px-4">
       <Logo />
       {children}
       <AccountButtons />

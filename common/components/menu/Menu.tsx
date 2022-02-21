@@ -38,7 +38,7 @@ export const Menu: React.FunctionComponent<MenuProps> = ({ open, onClose }) => {
       transition={{ type: "spring", stiffness: 10 }}
       className={`${
         open ? "fixed" : "none"
-      } top-0 bottom-0 left-0 right-0 bg-white`}
+      } top-0 bottom-0 left-0 right-0 bg-white ml-0`}
     >
       <motion.div
         className="flex flex-col	items-center justify-center h-full"
@@ -51,7 +51,7 @@ export const Menu: React.FunctionComponent<MenuProps> = ({ open, onClose }) => {
           className="font-mono p-4 text-2xl text-slate-900 hover:text-violet-900"
           href="/profile"
         >
-          My Profile
+          Profile
         </motion.a>
         <motion.button
           variants={item}

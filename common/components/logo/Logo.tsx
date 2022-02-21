@@ -4,7 +4,7 @@ export function Logo() {
   return (
     <div className="h-full flex items-center">
       <svg
-        className="h-full w-min"
+        className="h-full w-20"
         xmlns="http://www.w3.org/2000/svg"
         width="512"
         height="512"
